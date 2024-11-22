@@ -25,10 +25,4 @@ cd .. && pip install . && cd fastapi
 # Remove the first one once that test is fixed, see https://github.com/pydantic/pydantic/pull/10029
 # the remaining tests all failing bc we now correctly add a `'deprecated': True` attribute to the JSON schema,
 # So it's the FastAPI tests that need to be updated here
-./scripts/test.sh -vv \
-  --deselect tests/test_openapi_examples.py::test_openapi_schema \
-  --deselect tests/test_tutorial/test_query_params_str_validations/test_tutorial010.py::test_openapi_schema \
-  --deselect tests/test_tutorial/test_query_params_str_validations/test_tutorial010_an.py::test_openapi_schema \
-  --deselect tests/test_tutorial/test_query_params_str_validations/test_tutorial010_an_py310.py::test_openapi_schema \
-  --deselect tests/test_tutorial/test_query_params_str_validations/test_tutorial010_an_py39.py::test_openapi_schema \
-  --deselect tests/test_tutorial/test_query_params_str_validations/test_tutorial010_py310.py::test_openapi_schema \
+./scripts/test.sh -vv
